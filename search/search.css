@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+
+* {
+    font-family: "Bungee Tint", serif;
+    background-color: black;
+    box-sizing: border-box;
+    
+    
+}
+
+/* Body styling */
+body {
+    font-family: "Bungee Tint", serif;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 60px;
+    background-image: url(./starswallpaper.jpg); /* Adjust for fixed navbar */
+    
+}
+    
+    
+
+/* Navbar styling */
+#navbar {
+    background-color: rgb(49, 33, 170);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li {
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    background-color: rgb(82, 77, 77);
+}
+
+/* Giphy results section */
+#giphy-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px; /* Add some padding from the top */
+}
+
+.giphy-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Limit image width to 300px on larger screens */
+    margin: 2px;
+    border-radius: 5px; /* Optional for rounded corners on images */
+}
+
+/* Input field and buttons */
+#searchInput, #search-button, #random-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    color: purple;
+}
+
+#searchInput {
+    width: 60%;
+    max-width: 400px;
+    background-color: white;
+    color: rgb(222, 185, 185);
+    border: none;
+    margin-bottom: 10px;
+}
+
+#search-button, #random-button {
+    background-color: rgb(43, 43, 208);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+/* Mobile-first responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        margin-top: 80px; /* Ensure content does not overlap navbar */
+    }
+
+    #navbar ul {
+        flex-direction: column; /* Stack navbar items vertically */
+        padding: 10px 0;
+    }
+
+    #navbar ul li {
+        margin: 10px 0; /* Space out navbar items */
+    }
+
+    #searchInput {
+        width: 80%;
+        font-size: 16px; /* Adjust font size for input */
+    }
+
+    #search-button, #random-button {
+        font-size: 16px;
+    }
+
+    .giphy-image {
+        width: 90%; /* Use most of the screen width on smaller screens */
+        max-width: 200px; /* Ensure images are not too large */
+    }
+}
+
+/* Extra small screens (mobile) */
+@media screen and (max-width: 480px) {
+    #searchInput {
+        width: 85%;
+        font-size: 14px; /* Smaller font for small screens */
+    }
+
+    #search-button, #random-button {
+        font-size: 14px;
+        padding: 8px 15px; /* Smaller buttons */
+    }
+
+    .giphy-image {
+        max-width: 90%;
+        margin: 5px 0; /* Reduce image spacing */
+    }
+}
+
+/* Very small screens (portrait phones) */
+@media screen and (max-width: 320px) {
+    #giphy-results {
+        padding: 5px;
+    }
+
+    .giphy-image {
+        width: 100%;
+        margin: 2px;
+        max-width: 100%;
+    }
+
+    #searchInput {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    #search-button, #random-button {
+        font-size: 14px;
+        padding: 8px 10px; /* Adjust padding for very small screens */
+    }
+}
+
